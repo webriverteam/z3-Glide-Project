@@ -1,0 +1,85 @@
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote {
+	position: relative;
+	color: map-get($colors, body-color);
+	quotes: "\201C""\201D";
+	@include font-size(2.6);
+	box-shadow: none;
+	border-radius: 3px;
+	padding: 1rem 1rem 0.5rem 4rem;
+	margin-bottom: 2.4rem;
+
+	cite {
+		display: block;
+		margin-top: 2rem;
+		@include font-size(1.6);
+		text-transform: uppercase;
+		color: rgba(22, 41, 72, 0.45);
+		font-weight: 500;
+		font-family: 'IBM Plex Mono', monospace;
+		font-style: normal;
+		position: relative;
+		padding-left: 2rem;
+
+		&:before {
+			content: "-";
+			@include font-size(3);
+			height: 10px;
+			display: inline-block;
+			position: absolute;
+			left: 0px;
+			top: -11px;
+		}
+	}
+
+	p {
+		margin-bottom: 0px;
+		@include font-size(3.6);
+
+		&:before {
+			display: block;
+			content: open-quote;
+			@include font-size(5);
+			position: absolute;
+			top: 35px;
+			left: -15px;
+		}
+
+		&:after {
+			display: block;
+			content: close-quote;
+			@include font-size(5);
+			position: absolute;
+			right: 0;
+			bottom: 70px
+		}
+	}
+}
+
+q {
+	quotes: "\201C""\201D";
+	background-color: map-get($colors, white);
+	border-radius: 3px;
+	padding: 0.4rem 0.5rem 0.5rem 3rem;
+	position: relative;
+	color: map-get($colors, red);
+	;
+
+	&:before {
+		@include font-size(3);
+		position: absolute;
+		content: open-quote;
+		left: 7px;
+		top: -8px;
+		color: map-get($colors, red);
+		;
+	}
+
+	&:after {
+		display: none;
+	}
+}

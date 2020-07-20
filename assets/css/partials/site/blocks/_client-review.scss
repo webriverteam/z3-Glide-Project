@@ -1,0 +1,49 @@
+.client-big-img-area {
+  float: left;
+  width: 48%;
+  text-align: center;
+  position: relative;
+  margin-right: 3%;
+  img {
+    @include border-radius(8px 8px 32px 8px);
+  }
+}
+.review-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  img {
+    border-radius: 0;
+  }
+}
+.client-review {
+  float: right;
+  width: 48%;
+}
+.client-quote {
+  font-size: 3.6rem;
+  @include font(int, light, weight);
+  line-height: 1.44;
+  margin-bottom: 4rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+.client-big-img {
+  max-width: 372px;
+  position: relative;
+  margin: 0 auto;
+}
+.review-gray-icon {
+  position: absolute;
+  left: -72px;
+  bottom: 56px;
+}
+.review-yellow-icon {
+  position: absolute;
+  right: -56px;
+  top: 70px;
+}

@@ -1,0 +1,127 @@
+.slide-thumb img,
+.burger-single,
+.post-tags,
+.post-content-des p,
+.post-meta,
+.search-button,
+.single-blog-post,
+.wpcf7-submit,
+a,
+a:visited,
+button,
+input[type="submit"],
+.home-banner,
+header {
+  @include transition(all, 0.3s, ease-in-out);
+  outline: 0;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+header {
+  padding: 25px 0 11px 0;
+  @include transition(all, 0.3s, ease-in-out);
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.0665975);
+
+  z-index: 99999;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  &.shrink {
+    padding: 13px 0 8px 0;
+    position: fixed;
+    background-color: map-get($colors, white);
+    // box-shadow: 0px 5px 5px rgba(66, 175, 223, 0.1);
+  }
+}
+.white-logo {
+  display: none;
+}
+.trp-header {
+  .white-logo {
+    display: block;
+  }
+  .blue-logo {
+    display: none;
+  }
+}
+.logo {
+  position: relative;
+  z-index: 99999;
+  margin: 0;
+  line-height: 1;
+}
+
+.left-header {
+  float: left;
+  width: 300px;
+}
+.right-header {
+  float: right;
+  width: 65%;
+  text-align: right;
+  padding-top: 12px;
+}
+.no-overflow .left-header {
+  // background-color: darken(map-get($colors, red), 4%);
+  z-index: 99999;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5%;
+  padding-top: 6px;
+}
+
+.no-overflow header.shrink .left-header {
+  height: 61px;
+  padding-top: 0px;
+}
+
+.header-btns {
+  float: right;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+
+  a,
+  a:visited {
+    &.button.small-btn {
+      margin-right: 7px;
+      letter-spacing: 0.5px;
+      padding: 15px 25px;
+      &:last-child {
+        margin-right: 0;
+        padding: 15px 22px;
+      }
+    }
+  }
+}
+.trp-header {
+  .header-btns {
+    a,
+    a:visited {
+      &.button {
+        border-color: map-get($map: $colors, $key: white) !important;
+        background-color: map-get($map: $colors, $key: white);
+        color: map-get($map: $colors, $key: blue);
+        &:hover {
+          background-color: map-get($map: $colors, $key: blue);
+          color: map-get($map: $colors, $key: white);
+        }
+      }
+      &.white-bg {
+        background-color: transparent;
+        color: map-get($map: $colors, $key: white);
+        &:hover {
+          background-color: map-get($map: $colors, $key: white);
+          color: map-get($map: $colors, $key: blue);
+        }
+      }
+    }
+  }
+}

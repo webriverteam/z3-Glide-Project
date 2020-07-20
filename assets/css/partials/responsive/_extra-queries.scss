@@ -1,0 +1,76 @@
+@media only screen and (width: 568px) {
+
+	.owl-carousel .owl-wrapper-outer {
+		padding-top: 0;
+		bottom: 50px;
+	}
+
+	.view-burgers {
+		margin-top: 115px;
+	}
+
+	.home-slider .owl-pagination {
+		display: block;
+		position: relative;
+		bottom: 50px;
+	}
+
+	.testimonials .owl-theme .owl-controls {
+		top: -35px;
+	}
+}
+
+@media only screen and (width: 375px) {
+
+	.slider {
+		top: 35px;
+	}
+
+	.view-burgers {
+		margin-top: 108px;
+	}
+}
+
+@media only screen and (width: 414px) {
+
+	.slider {
+		top: 30px;
+	}
+
+	.view-burgers {
+		margin-top: 105px;
+	}
+}
+
+@media only screen and (width: 736px) {
+
+	.home-banner {
+		height: 325px;
+	}
+}
+
+@media only screen and (width: 384px) {
+
+	.slider {
+		top: 40px;
+	}
+
+	.view-burgers {
+		margin-top: 115px;
+	}
+}
+
+@media only screen and (width: 600px) {
+
+	.home-banner {
+		height: 380px;
+	}
+
+	.slider {
+		top: 45px;
+	}
+
+	.view-burgers {
+		margin-top: 105px;
+	}
+}

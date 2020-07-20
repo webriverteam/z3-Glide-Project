@@ -1,0 +1,102 @@
+.faqs-container h2 {
+  margin-bottom: 5rem;
+}
+.faqs-area {
+  border-top: 1px solid map-get($map: $colors, $key: border-clr);
+}
+.faq,
+.page-content .faq {
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid map-get($map: $colors, $key: border-clr);
+
+  a,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+    display: block;
+    @include font-size(2.4);
+    @include font(os, xbold);
+    color: map-get($colors, faq-heading);
+    cursor: pointer;
+    position: relative;
+    line-height: 1.2;
+    padding: 2.5rem 50px 2.8rem 0;
+    border-bottom: 0px;
+
+    &:after {
+      content: "";
+      background-image: url(../img/plus-icon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 28px;
+      top: calc(50% - 9px);
+      display: block;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+    }
+
+    &:hover {
+      color: map-get($map: $colors, $key: green);
+    }
+  }
+
+  .faq-content {
+    font-size: 2.2rem;
+    padding: 0 8rem 0 0;
+  }
+  &:hover {
+  }
+
+  &.active {
+    padding-bottom: 3rem;
+    a {
+      color: map-get($map: $colors, $key: green);
+    }
+    a:after {
+      background-image: url(../img/less-icon.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotate(0deg);
+    }
+  }
+
+  .faq-content a {
+    padding: 0;
+    display: inline-block;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    @include font(int, reg, weight);
+    @include border-radius(0px);
+    color: map-get($colors, green);
+
+    &:hover {
+      color: map-get($colors, green);
+      border-bottom: 1px solid map-get($colors, green);
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+.see-all {
+  margin-top: 6rem;
+}
+.faq-content {
+  display: none;
+  padding: 0 30px 0rem 30px;
+
+  p {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0 0 5px 0;
+  }
+}

@@ -1,0 +1,45 @@
+.wp-caption {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5rem !important;
+
+  &.alignnone {
+    margin: 1.5rem 0 1.5rem 0;
+  }
+
+  &.alignleft {
+    margin: 5rem 2rem 1rem 0;
+  }
+
+  &.alignright {
+    margin: 0.5rem 0 1rem 2rem;
+  }
+
+  img {
+    border: 0 none;
+    height: auto;
+    margin: 0 0 0.8rem 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+    border-radius: 0;
+  }
+
+  .wp-caption-text {
+    margin: 0;
+    text-align: left;
+  }
+
+  p.wp-caption-text {
+    @include font(int, demi);
+    @include font-size(1.6);
+    margin: 0;
+    color: map-get($map: $colors, $key: gray6);
+  }
+
+  img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

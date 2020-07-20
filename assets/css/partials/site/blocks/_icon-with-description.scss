@@ -1,0 +1,35 @@
+.icon-with-desc {
+  text-align: center;
+  .iwd-col {
+    display: inline-block;
+    width: 19%;
+    margin-right: 7.5%;
+    &:last-child {
+      margin-right: 0;
+    }
+    h6 {
+      font-size: 17px;
+      @include font(os, bold);
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+.iwd-content {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.iwd-icon {
+  display: table;
+  width: 100%;
+  margin-bottom: 15px;
+  span {
+    display: table-cell;
+    height: 60px;
+    vertical-align: middle;
+    line-height: 1;
+
+    img {
+      max-height: 55px;
+    }
+  }
+}
